@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 @SpringBootTest
-class OrderServiceImplTest {
+class OrderServiceImplUnitTest {
     @MockBean
     private OrderRepository orderRepository;
     
@@ -19,7 +19,7 @@ class OrderServiceImplTest {
     @Test
     void testSaveOrder() {
         Order order = new Order();
-        order.setOrderId(123);
+        order.setId(123L);
 
         when(orderRepository.save(Mockito.any())).thenReturn(order);
 

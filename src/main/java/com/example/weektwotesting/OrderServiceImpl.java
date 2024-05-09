@@ -3,13 +3,12 @@ package com.example.weektwotesting;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-@RequiredArgsConstructor
+
 @Service
+@RequiredArgsConstructor
 public class OrderServiceImpl {
     private final OrderRepository orderRepository;
 
-
-
-    public Order saveOrder(Order order) {
-     return  orderRepository.save(order);
-}}
+    public void saveOrder(Order order) {
+        orderRepository.save(order);
+    }}
